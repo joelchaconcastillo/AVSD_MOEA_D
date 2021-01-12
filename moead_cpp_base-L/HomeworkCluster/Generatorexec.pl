@@ -93,7 +93,7 @@ my @Instance = ("DTLZ1", "DTLZ2", "DTLZ3", "DTLZ4", "DTLZ5", "DTLZ6", "DTLZ7");
    	}
    }
 #@Instance = ("WFG1", "WFG2", "WFG3", "WFG4", "WFG5", "WFG6", "WFG7", "WFG8", "WFG9", "minuWFG1", "minuWFG2", "minuWFG3", "minuWFG4", "minuWFG5", "minuWFG6", "minuWFG7", "minuWFG8", "minuWFG9");
-@Instance = ("minuWFG1", "minuWFG2", "minuWFG3", "minuWFG4", "minuWFG5", "minuWFG6", "minuWFG7", "minuWFG8", "minuWFG9");
+@Instance = ("minusWFG1", "minusWFG2", "minusWFG3", "minusWFG4", "minusWFG5", "minusWFG6", "minusWFG7", "minusWFG8", "minusWFG9");
    foreach(@Instance)
    {
    	my $nvar;
