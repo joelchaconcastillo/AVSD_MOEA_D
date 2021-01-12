@@ -674,7 +674,7 @@ double bt9(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
    long double sum1 = 0.0, sum2 = 0.0, sum3=0.0, theta = 1.0e-9;
-   for(int j = 2; j <= n; j++)
+   for(int j = 3; j <= n; j++)
    {
       long double yj = x[j-1] - sin((j*M_PI)/(2.0*n));
       if((j%3)==0) sum1 += D1(yj, theta);
