@@ -56,42 +56,42 @@ my @Instance = ("DTLZ1", "DTLZ2", "DTLZ3", "DTLZ4", "DTLZ5", "DTLZ6", "DTLZ7");
 #   	}
 #   }
 
-   @Instance = ("minusDTLZ1", "minusDTLZ2", "minusDTLZ3", "minusDTLZ4", "minusDTLZ5", "minusDTLZ6", "minusDTLZ7");
-   foreach(@Instance)
-   {
-   	my $nvar;
-   	
-   	for(my $nobj = 2; $nobj <=3; $nobj++)
-   	{
-  	   if( $nobj eq 2 ) 
-	   {
-	      $CR = 0.75;
-	      $F = 0.75;
-	   }
-  	   elsif( $nobj eq 3 ) 
-	   {
-	      $CR = 0.5;
-	      $F = 0.5;
-	   }
-      	   if($_ eq "minusDTLZ1")
-   	   {
-   	      $nvar=5+$nobj-1;
-   	   }
-   	   elsif($_ eq "minusDTLZ7")
-   	   {
-   	      $nvar=20+$nobj-1;
-   	   }
-   	   else
-   	   {
-   	      $nvar=10+$nobj-1;
-   	   }
-   	
-   	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
-   	   {
-   	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F $nvar\n";
-   	   }
-   	}
-   }
+#   @Instance = ("minusDTLZ1", "minusDTLZ2", "minusDTLZ3", "minusDTLZ4", "minusDTLZ5", "minusDTLZ6", "minusDTLZ7");
+#   foreach(@Instance)
+#   {
+#   	my $nvar;
+#   	
+#   	for(my $nobj = 2; $nobj <=3; $nobj++)
+#   	{
+#  	   if( $nobj eq 2 ) 
+#	   {
+#	      $CR = 0.75;
+#	      $F = 0.75;
+#	   }
+#  	   elsif( $nobj eq 3 ) 
+#	   {
+#	      $CR = 0.5;
+#	      $F = 0.5;
+#	   }
+#      	   if($_ eq "minusDTLZ1")
+#   	   {
+#   	      $nvar=5+$nobj-1;
+#   	   }
+#   	   elsif($_ eq "minusDTLZ7")
+#   	   {
+#   	      $nvar=20+$nobj-1;
+#   	   }
+#   	   else
+#   	   {
+#   	      $nvar=10+$nobj-1;
+#   	   }
+#   	
+#   	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
+#   	   {
+#   	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F $nvar\n";
+#   	   }
+#   	}
+#   }
 #@Instance = ("WFG1", "WFG2", "WFG3", "WFG4", "WFG5", "WFG6", "WFG7", "WFG8", "WFG9", "minuWFG1", "minuWFG2", "minuWFG3", "minuWFG4", "minuWFG5", "minuWFG6", "minuWFG7", "minuWFG8", "minuWFG9");
 @Instance = ("minusWFG1", "minusWFG2", "minusWFG3", "minusWFG4", "minusWFG5", "minusWFG6", "minusWFG7", "minusWFG8", "minusWFG9");
    foreach(@Instance)
@@ -125,34 +125,32 @@ my @Instance = ("DTLZ1", "DTLZ2", "DTLZ3", "DTLZ4", "DTLZ5", "DTLZ6", "DTLZ7");
    #}
 
    #@Instance = ("UF1", "UF2", "UF3", "UF4", "UF5", "UF6", "UF7", "BT1", "BT2", "BT3", "BT4", "BT5", "BT6", "BT7", "BT8");
-@Instance = ("BT1", "BT2", "BT3", "BT4", "BT5", "BT6", "BT7", "BT8");
-my $nobj=2;
-$CR = 0.75;
-$F = 0.75;
+   #my $nobj=2;
+   #$CR = 0.75;
+   #$F = 0.75;
+   #
+   #   foreach(@Instance)
+   #   {
+   #   	   my $nvar=30;
+   #   	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
+   #   	   {
+   #		   #print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes  $neighboursize $prob $nvar $Di\n";
+   #   	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F $nvar\n";
+   #   	   }
+   #   }
 
-   foreach(@Instance)
-   {
-   	   my $nvar=30;
-   	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
-   	   {
-		   #print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes  $neighboursize $prob $nvar $Di\n";
-   	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F $nvar\n";
-   	   }
-   }
-
-   #@Instance = ("UF8", "UF9", "UF10", "BT9");
-@Instance = ("BT9");
-$nobj=3;
-$CR = 0.5;
-$F = 0.5;
-
-   foreach(@Instance)
-   {
-   	   my $nvar=30;
-   	
-   	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
-   	   {
-		   #print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $nvar $Di\n";
-   	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F $nvar\n";
-   	   }
-   }
+   #   @Instance = ("UF8", "UF9", "UF10", "BT9");
+   #$nobj=3;
+   #$CR = 0.5;
+   #$F = 0.5;
+   #
+   #   foreach(@Instance)
+   #   {
+   #   	   my $nvar=30;
+   #   	
+   #   	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
+   #   	   {
+   #		   #print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $nvar $Di\n";
+   #   	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F $nvar\n";
+   #   	   }
+   #   }
