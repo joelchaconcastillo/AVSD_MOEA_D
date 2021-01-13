@@ -137,7 +137,7 @@ my @Instance = ("DTLZ1", "DTLZ2", "DTLZ3", "DTLZ4", "DTLZ5", "DTLZ6", "DTLZ7");
       	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
       	   {
    		   #print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes  $neighboursize $prob $nvar $Di\n";
-      	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $p $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F _ratiobias_$b $b $nvar\n";
+      	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $p $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F ratiobias_$b $b $nvar\n";
       	   }
       }
    #   @Instance = ("UF8", "UF9", "UF10", "BT9");
@@ -153,7 +153,7 @@ my @Instance = ("DTLZ1", "DTLZ2", "DTLZ3", "DTLZ4", "DTLZ5", "DTLZ6", "DTLZ7");
          	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
          	   {
       		   #print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $nvar $Di\n";
-         	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F _ratiobias_$b $b $nvar\n";
+         	   	print $fout "~$PathAlgorithm/moea $PathAlgorithm $_ $Sed $nobj $pops $max_nfes $neighboursize $prob $limit $CR $F ratiobias_$b $b $nvar\n";
          	   }
          }
    }

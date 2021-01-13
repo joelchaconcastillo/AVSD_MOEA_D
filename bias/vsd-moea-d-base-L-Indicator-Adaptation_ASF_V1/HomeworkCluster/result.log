@@ -68,3 +68,4 @@ Executes /home/joel.chacon/AVSD_MOEA_D/bias/vsd-moea-d-base-L-Indicator-Adaptati
 Executes /home/joel.chacon/AVSD_MOEA_D/bias/vsd-moea-d-base-L-Indicator-Adaptation_ASF_V1/Ejecutable /home/joel.chacon/AVSD_MOEA_D/bias/vsd-moea-d-base-L-Indicator-Adaptation_ASF_V1 BT7 33 2 100 501 25000000 0 0.75 30 0.4 0.5 in core with id 68
 Executes /home/joel.chacon/AVSD_MOEA_D/bias/vsd-moea-d-base-L-Indicator-Adaptation_ASF_V1/Ejecutable /home/joel.chacon/AVSD_MOEA_D/bias/vsd-moea-d-base-L-Indicator-Adaptation_ASF_V1 BT7 34 2 100 501 25000000 0 0.75 30 0.4 0.5 in core with id 69
 Executes /home/joel.chacon/AVSD_MOEA_D/bias/vsd-moea-d-base-L-Indicator-Adaptation_ASF_V1/Ejecutable /home/joel.chacon/AVSD_MOEA_D/bias/vsd-moea-d-base-L-Indicator-Adaptation_ASF_V1 BT7 35 2 100 501 25000000 0 0.75 30 0.4 0.5 in core with id 70
+slurmstepd: error: *** JOB 39857 ON c-1-35 CANCELLED AT 2021-01-13T14:16:00 ***
