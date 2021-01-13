@@ -366,8 +366,8 @@ void CMOEAD::exec_emo(int run)
 	init_population();
 	init_neighbourhood();
 
-	sprintf(filename1,"%s/POS/v2_POS_MOEAD_%s_RUN%d_seed_%d_nobj_%d_nvar_%d_DI_%lf_DF_%lf_CR_%lf_F_%lf",strpath, strTestInstance,run, seed, nobj, nvar, Di/sqrt(nvar), Df, CR, F);
-	sprintf(filename2,"%s/POF/v2_POF_MOEAD_%s_RUN%d_seed_%d_nobj_%d_nvar_%d_DI_%lf_DF_%lf_CR_%lf_F_%lf",strpath, strTestInstance,run, seed, nobj, nvar, Di/sqrt(nvar), Df, CR, F);
+	sprintf(filename1,"%s/POS/v2_POS_MOEAD_%s_RUN%d_seed_%d_nobj_%d_nvar_%d_DI_%lf_DF_%lf_CR_%lf_F_%lf_%s",strpath, strTestInstance,run, seed, nobj, nvar, Di/sqrt(nvar), Df, CR, F, description);
+	sprintf(filename2,"%s/POF/v2_POF_MOEAD_%s_RUN%d_seed_%d_nobj_%d_nvar_%d_DI_%lf_DF_%lf_CR_%lf_F_%lf_%s",strpath, strTestInstance,run, seed, nobj, nvar, Di/sqrt(nvar), Df, CR, F, description);
         long long current = nfes;
 	long long accumulator = 0, bef = nfes;
 	save_pos(filename1);

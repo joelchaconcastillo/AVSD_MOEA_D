@@ -167,7 +167,7 @@ foreach my $pops(("100"))
             	   $nWeight= 496;
                	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
                	   {
-               	   	print $fout "$PathAlgorithm/Ejecutable $PathAlgorithm $_ $Sed $nobj $pops $nWeight $max_nfes $CR $F _ratiobias_$b $b $nvar $Di $Df\n";
+               	   	print $fout "$PathAlgorithm/Ejecutable $PathAlgorithm $_ $Sed $nobj $pops $nWeight $max_nfes $CR $F ratiobias_$b $b $nvar $Di $Df\n";
                	   }
                }
  }
