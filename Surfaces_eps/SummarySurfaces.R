@@ -4,35 +4,26 @@ library("eaf")
 
 
 #pdf("WFG",width=10,height=10,paper='special') 
-Instances = c("WFG1", "WFG2", "WFG3", "WFG4","WFG5", "WFG6", "WFG7", "WFG8", "WFG9")
+Instances = c("BT8_2", "UF3_2", "WFG6_2", "minusDTLZ3_2")
 
 for( i in Instances)
 {
 	setEPS()
 	postscript(paste(i,".eps", sep=""))
 #	postscript(paste(i,".eps", sep=""), width=7, height=7)
-	strGDE3 = paste( "../GDE3/Summary_", i, sep="")
-	GDE3 =  read.data.sets(strGDE3)
+	strMOEAD= paste( "./moead_", i, sep="")
+	MOEAD =  read_datasets(strMOEAD)
 	
-	strMOEAD = paste( "../MOEAD/Summary_", i, sep="")
-	MOEAD =  read.data.sets(strMOEAD)
-
-	strNSGAII = paste( "../NSGAII/Summary_", i, sep="")
-	NSGAII =  read.data.sets(strNSGAII)
-
-	strSMSEMOA = paste( "../SMSEMOA/Summary_", i, sep="")
-	SMSEMOA =  read.data.sets(strSMSEMOA)
-
-	strPROPOSAL = paste( "../PROPOSAL/Summary_", i, sep="") ##La propuesta..
-	MOEAD_EVSD =  read.data.sets(strPROPOSAL)
+	strAVSDMOEAD = paste( "./avsd-moead_", i, sep="")
+	AVSDMOEAD =  read_datasets(strAVSDMOEAD)
 	
-	strOPTIMAL = paste( "../OPTIMAL/Summary_", i, sep="") 
-	OPTIMAL =  read.data.sets(strOPTIMAL)
-	###Como solucón temporal dado que son muchos puntos y el archivo eps es pesado se obtiene una muestra de la solucion optima..
-	OPTIMAL = OPTIMAL[sample(nrow(OPTIMAL), size=2000, replace=FALSE),]
+#	strOPTIMAL = paste( "../OPTIMAL/Summary_", i, sep="") 
+#	OPTIMAL =  read.data.sets(strOPTIMAL)
+#	###Como solucón temporal dado que son muchos puntos y el archivo eps es pesado se obtiene una muestra de la solucion optima..
+#	OPTIMAL = OPTIMAL[sample(nrow(OPTIMAL), size=2000, replace=FALSE),]
 
-	eafplot( list( GDE3=GDE3,  MOEAD=MOEAD, NSGAII=NSGAII, SMSEMOA=SMSEMOA, MOEAD_EVSD=MOEAD_EVSD ), percentiles=c(50), extra.points=OPTIMAL, extra.pch=16, cex=0.1, extra.col="red", extra.legend=c("OPTIMAL"), main = i, col=c("yellow", "green", "blue", "magenta", "black"))
-	#eafplot( list( GDE3=GDE3,  MOEAD=MOEAD, NSGAII=NSGAII, SMSEMOA=SMSEMOA, PROPOSAL=PROPOSAL, OPTIMAL=OPTIMAL ), percentiles=c(50))
+	eafplot( list( MOEAD=MOEAD,  AVSDMOEAD=AVSDMOEAD), percentiles=c(50), col=c("blue", "black"))
+	#eafplot( list( MOEAD=MOEAD,  AVSDMOEAD=AVSDMOEAD,), percentiles=c(50), extra.points=OPTIMAL, extra.pch=16, cex=0.1, extra.col="red", extra.legend=c("OPTIMAL"), main = i, col=c("yellow", "green", "blue", "magenta", "black"))
 	dev.off()
 }
 

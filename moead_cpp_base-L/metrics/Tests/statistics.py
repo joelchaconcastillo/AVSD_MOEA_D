@@ -1,5 +1,4 @@
 import sys
-from scipy import stats
 from numpy import *
 import re
 def statistic(file_a, bestv):
