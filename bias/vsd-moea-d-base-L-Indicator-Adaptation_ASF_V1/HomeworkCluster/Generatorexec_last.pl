@@ -144,7 +144,10 @@ foreach my $pops(("100"))
 #      	}
 #      }
  #@Instance = ("UF1", "UF2", "UF3", "UF4", "UF5", "UF6", "UF7", "BT1", "BT2", "BT3", "BT4", "BT5", "BT6", "BT7", "BT8");
-      @Instance = ("BT1", "BT7");
+
+   foreach my $b(("1.0", "0.5", "0.25", "0.125"))
+   {
+    @Instance = ("BT1", "BT2", "BT3", "BT4", "BT5", "BT6", "BT7", "BT8");
      my $nobj=2;
          foreach(@Instance)
          {
@@ -152,21 +155,20 @@ foreach my $pops(("100"))
       	   $nWeight= 501;
          	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
          	   {
-         	   	print $fout "$PathAlgorithm/Ejecutable $PathAlgorithm $_ $Sed $nobj $pops $nWeight $max_nfes $CR $F $nvar $Di $Df\n";
+         	   	print $fout "$PathAlgorithm/Ejecutable $PathAlgorithm $_ $Sed $nobj $pops $nWeight $max_nfes $CR $F _ratiobias_$b $b $nvar $Di $Df\n";
          	   }
          }
-      
-      
 #      @Instance = ("UF8", "UF9", "UF10", "BT9");
-      #      @Instance = ("BT9");
-      #      $nobj=3;
-      #         foreach(@Instance)
-      #         {
-      #         	   my $nvar=30;
-      #      	   $nWeight= 496;
-      #         	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
-      #         	   {
-      #         	   	print $fout "$PathAlgorithm/Ejecutable $PathAlgorithm $_ $Sed $nobj $pops $nWeight $max_nfes $CR $F $nvar $Di $Df\n";
-      #         	   }
-      #         }
+            @Instance = ("BT9");
+            $nobj=3;
+               foreach(@Instance)
+               {
+               	   my $nvar=30;
+            	   $nWeight= 496;
+               	   for(my $Sed = 1; $Sed <=35; $Sed++) ##Realizar 35 ejecuciones con distintas semilla de cada instancia..
+               	   {
+               	   	print $fout "$PathAlgorithm/Ejecutable $PathAlgorithm $_ $Sed $nobj $pops $nWeight $max_nfes $CR $F _ratiobias_$b $b $nvar $Di $Df\n";
+               	   }
+               }
+ }
 }

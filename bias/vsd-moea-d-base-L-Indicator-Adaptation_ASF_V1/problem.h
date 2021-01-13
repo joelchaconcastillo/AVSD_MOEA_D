@@ -568,7 +568,7 @@ long double Q(long double z)
 double bt1(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-15;
+   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-10*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - sin((j*M_PI)/(2.0*n));
@@ -581,7 +581,7 @@ double bt1(vector<double> &f, vector<double> &x)
 double bt2(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0/5.0;
+   long double sum1 = 0.0, sum2 = 0.0, theta = (1.0/5.0)*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - sin((j*M_PI)/(2.0*n));
@@ -594,7 +594,7 @@ double bt2(vector<double> &f, vector<double> &x)
 double bt3(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-8;
+   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-8*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - sin((j*M_PI)/(2.0*n));
@@ -607,7 +607,7 @@ double bt3(vector<double> &f, vector<double> &x)
 double bt4(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-8;
+   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-8*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - sin((j*M_PI)/(2.0*n));
@@ -620,7 +620,7 @@ double bt4(vector<double> &f, vector<double> &x)
 double bt5(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-10;
+   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-10*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - sin((j*M_PI)/(2.0*n));
@@ -633,7 +633,7 @@ double bt5(vector<double> &f, vector<double> &x)
 double bt6(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-4;
+   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-4*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - pow(x[0],0.5+((1.5*(j-1.0))/(n-1.0)));
@@ -646,7 +646,7 @@ double bt6(vector<double> &f, vector<double> &x)
 double bt7(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-5;
+   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-3*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - sin(6.0*M_PI*x[0]);
@@ -660,7 +660,7 @@ double bt7(vector<double> &f, vector<double> &x)
 double bt8(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-3;
+   long double sum1 = 0.0, sum2 = 0.0, theta = 1.0e-3*ratiobias;
    for(int j = 2; j <= n; j++)
    {
       long double yj = x[j-1] - pow(x[0],0.5+((1.5*(j-1.0))/(n-1.0)));
@@ -673,7 +673,7 @@ double bt8(vector<double> &f, vector<double> &x)
 double bt9(vector<double> &f, vector<double> &x)
 {
    int n = x.size();
-   long double sum1 = 0.0, sum2 = 0.0, sum3=0.0, theta = 1.0e-9;
+   long double sum1 = 0.0, sum2 = 0.0, sum3=0.0, theta = 1.0e-9*ratiobias;
    for(int j = 3; j <= n; j++)
    {
       long double yj = x[j-1] - sin((j*M_PI)/(2.0*n));

@@ -26,9 +26,9 @@ int param_k, param_l;
 
 double  lowBound = 0,   uppBound = 1;   //  lower and upper bounds of variables
 double  vlowBound[2000] ,   vuppBound[2000];   //  lower and upper bounds of variables
-
+double ratiobias =1.0;
 char    strTestInstance[256];
-char    strpath[800];
+char    strpath[800], description[100];
 
 
 //------------- Parameters in random number ------------------

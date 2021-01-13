@@ -30,8 +30,8 @@ double  lowBound = 0,   uppBound = 1;   //  lower and upper bounds of variables
 double  vlowBound[100] ,   vuppBound[100];   //  lower and upper bounds of variables
 
 char    strTestInstance[256];
-char    strpath[800];
-
+char    strpath[800], description[100];
+double ratiobias = 1;
 
 
 //------------- Parameters in random number ------------------

@@ -97,6 +97,8 @@ int main(int argc,char *argv[])
        limit = atof(argv[index++]);
        CR = atof(argv[index++]);
        F = atof(argv[index++]);
+       strcpy(description, argv[index++]);
+       ratiobias = atof(argv[index++]);
 
        if(argc < index+2)//Two nvar and Di
        {

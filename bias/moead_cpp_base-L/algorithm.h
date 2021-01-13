@@ -334,8 +334,8 @@ void CMOEAD::exec_emo(int run)
 
 	// initialization
     nfes      = 0;
-    sprintf(filename1,"%s/POS/POS_MOEAD_%s_RUN%d_seed_%d_nobj_%d_niche_%d.dat_bounded_CR_%lf_F_%lf",strpath, strTestInstance,run, seed, nobj, niche, CR, F);
-    sprintf(filename2,"%s/POF/POF_MOEAD_%s_RUN%d_seed_%d_nobj_%d_niche_%d.dat_bounded_CR_%lf_F_%lf",strpath, strTestInstance,run, seed, nobj, niche, CR, F);
+    sprintf(filename1,"%s/POS/POS_MOEAD_%s_RUN%d_seed_%d_nobj_%d_niche_%d.dat_bounded_CR_%lf_F_%lf_%s",strpath, strTestInstance,run, seed, nobj, niche, CR, F, description);
+    sprintf(filename2,"%s/POF/POF_MOEAD_%s_RUN%d_seed_%d_nobj_%d_niche_%d.dat_bounded_CR_%lf_F_%lf_%s",strpath, strTestInstance,run, seed, nobj, niche, CR, F, description);
 
     init_population();
     init_neighbourhood();

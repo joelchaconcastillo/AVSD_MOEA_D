@@ -95,10 +95,11 @@ int main(int argc, char *argv[])
 	max_nfes= atoll(argv[index++]);
 	CR = atof(argv[index++]);
 	F = atof(argv[index++]);
+        strcpy(description, argv[index++]);
+        ratiobias = atof(argv[index++]); 
 	if(argc <= index+3)
 	{
 	   nvar = atoi(argv[index++]);
-	 
 	}
 	else
 	{
