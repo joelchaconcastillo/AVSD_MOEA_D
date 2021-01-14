@@ -1,7 +1,7 @@
 #algname=(GDE3 MOEA-D NSGAII R2-MOEA IBEA VSD-MOEA-eta-2 VSD-MOEA-eta-5 SMS-EMOA)
 #algname=(MOEA-D NSGA-II NSGA-III R2-EMOA VSD-MOEA-D)
 algname=(POF)
-for b in 1.0 0.5 0.25 0.125 0.0625 0.03125;
+for b in 1.0 0.5 0.25 0.125 0.0625 0.03125 0.015625 0.0078125 0.00390625 0.001953125 0.000976562;
 do
 ##Calculating the HV considering plus 10% for each objective
    cont=0

@@ -1,7 +1,6 @@
 #PATHA=/home/joel.chacon/Current/MyResearchTopics/Data_Dominance/StateOfTheArt_2/HV
 PATHA=../HV/  #/home/joel.chacon/Current/MyResearchTopics/Data_Decomposition/StateOfTheArt/HV
-for b in 1.0 0.5 0.25 0.125 0.0625 0.03125;
-
+for b in 1.0 0.5 0.25 0.125 0.0625 0.03125 0.015625 0.0078125 0.00390625 0.001953125 0.000976562;
 do
   #for i in WFG1 WFG2 WFG3 WFG4 WFG5 WFG6 WFG7 WFG8 WFG9 DTLZ1 DTLZ2 DTLZ3 DTLZ4 DTLZ5 DTLZ6 DTLZ7 UF1 UF2 UF3 UF4 UF5 UF6 UF7 minusWFG1 minusWFG2 minusWFG3 minusWFG4 minusWFG5 minusWFG6 minusWFG7 minusWFG8 minusWFG9 minusDTLZ1 minusDTLZ2 minusDTLZ3 minusDTLZ4 BT1 BT2 BT3 BT4 BT5 BT6 BT7 BT8;
   for i in BT1 BT2 BT3 BT4 BT5 BT6 BT7 BT8;
