@@ -146,7 +146,7 @@ foreach my $pops(("100"))
  #@Instance = ("UF1", "UF2", "UF3", "UF4", "UF5", "UF6", "UF7", "BT1", "BT2", "BT3", "BT4", "BT5", "BT6", "BT7", "BT8");
 
  #foreach my $b(("1.0", "0.5", "0.25", "0.125"))
-   foreach my $b(("0.0625", "0.03125"))
+   foreach my $b(("0.015625", "0.0078125", "0.00390625", "0.001953125", "0.000976562"))
    {
     @Instance = ("BT1", "BT2", "BT3", "BT4", "BT5", "BT6", "BT7", "BT8");
      my $nobj=2;
