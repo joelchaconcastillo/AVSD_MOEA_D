@@ -1,19 +1,23 @@
 PATH1=../POF
-for instance in WFG1 WFG2 WFG3 WFG4 WFG5 WFG6 WFG7 WFG8 WFG9 DTLZ1 DTLZ2 DTLZ3 DTLZ4 DTLZ5 DTLZ6 DTLZ7 UF1 UF2 UF3 UF4 UF5 UF6 UF7 BT1 BT2 BT3 BT4 BT5 BT6 BT7 BT8 minusWFG1 minusWFG2 minusWFG3 minusWFG4 minusWFG5 minusWFG6 minusWFG7 minusWFG8 minusWFG9 minusDTLZ1 minusDTLZ2 minusDTLZ3 minusDTLZ4
+for b in 1.0 0.5 0.25 0.125 0.0625 0.03125;
 do
-   for sed in {1..35}   
-   do
-   tail -100 $PATH1/POF_MOEAD_${instance}_RUN${sed}_seed*_nobj_2* > POF/${instance}_2_${sed}
-   done
+  #for instance in WFG1 WFG2 WFG3 WFG4 WFG5 WFG6 WFG7 WFG8 WFG9 DTLZ1 DTLZ2 DTLZ3 DTLZ4 DTLZ5 DTLZ6 DTLZ7 UF1 UF2 UF3 UF4 UF5 UF6 UF7 BT1 BT2 BT3 BT4 BT5 BT6 BT7 BT8 minusWFG1 minusWFG2 minusWFG3 minusWFG4 minusWFG5 minusWFG6 minusWFG7 minusWFG8 minusWFG9 minusDTLZ1 minusDTLZ2 minusDTLZ3 minusDTLZ4
+  for instance in BT1 BT2 BT3 BT4 BT5 BT6 BT7 BT8 
+  do
+     for sed in {1..35}   
+     do
+     tail -100 $PATH1/POF_MOEAD_${instance}_RUN${sed}_seed*_nobj_2*_$b > POF/${instance}_2_${sed}_$b
+     done
+  done
+  #for instance in WFG1 WFG2 WFG3 WFG4 WFG5 WFG6 WFG7 WFG8 WFG9 DTLZ1 DTLZ2 DTLZ3 DTLZ4 DTLZ5 DTLZ6 DTLZ7 UF8 UF9 UF10 BT9 minusWFG1 minusWFG2 minusWFG3 minusWFG4 minusWFG5 minusWFG6 minusWFG7 minusWFG8 minusWFG9 minusDTLZ1 minusDTLZ2 minusDTLZ3 minusDTLZ4
+  for instance in BT9
+  do
+     for sed in {1..35}   
+     do
+     tail -100 $PATH1/POF_MOEAD_${instance}_RUN${sed}_seed*_nobj_3*_$b > POF/${instance}_3_${sed}_$b
+     done
+  done
 done
-for instance in WFG1 WFG2 WFG3 WFG4 WFG5 WFG6 WFG7 WFG8 WFG9 DTLZ1 DTLZ2 DTLZ3 DTLZ4 DTLZ5 DTLZ6 DTLZ7 UF8 UF9 UF10 BT9 minusWFG1 minusWFG2 minusWFG3 minusWFG4 minusWFG5 minusWFG6 minusWFG7 minusWFG8 minusWFG9 minusDTLZ1 minusDTLZ2 minusDTLZ3 minusDTLZ4
-do
-   for sed in {1..35}   
-   do
-   tail -100 $PATH1/POF_MOEAD_${instance}_RUN${sed}_seed*_nobj_3* > POF/${instance}_3_${sed}
-   done
-done
-
 #PATH1=../r2-moea-general/
 #
 #for instance in WFG1 WFG2 WFG3 WFG4 WFG5 WFG6 WFG7 WFG8 WFG9 DTLZ1 DTLZ2 DTLZ3 DTLZ4 DTLZ5 DTLZ6 DTLZ7 UF1 UF2 UF3 UF4 UF5 UF6 UF7
